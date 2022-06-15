@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Saira', sans-serif;
+    background-color: #100C17;
+    color: #E8E5F6;
+}
+
+.battery {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+.battery-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px 16px;
+    background-color: #04010B;
+    border-radius: 15px;
+    justify-content: space-between;
+   
+    filter: drop-shadow(0px 4px 23px rgba(10, 19, 81, 0.123));
+  
+}
+  
+
+.battery-data {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 32px 0;
+    width: 360px;
+}
+
+.battery-text {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.battery-percentage {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 16px 0px;
+}
+
+.battery-status {
+    display: flex;
+    align-items: center;
+}
+
+.battery-status i {
+    font-size: 22px;
+    margin-left: 16px;
+}
+
+.battery-capsule{
+    position: relative;
+    width: 133px;
+    height: 196px;
+    background: rgba(63, 60, 74, 0.4);
+    box-shadow: inset 1px 0px 34px 3px rgba(129, 127, 135, 0.25);
+    border-radius: 18px;
+   
+}
+
+.battery-level {
+    position: absolute;
+    inset: 2px;
+    overflow-y: hidden;
+    border-radius: 3px;
+   
+}
+
+.battery-liquid {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 36px;
+    background: linear-gradient(228.88deg, #EA384D 14.08%, #D31027 83.46%);
+    border-radius: 5px 5px 18px 18px;
+}
+
+
+
+
+/*Full battery icon*/ 
+.green-color {
+    background: linear-gradient(142deg, #6CCBA7 18%, #219D57 84.75%);
+    filter: drop-shadow(0px 0px 23px rgb(108, 203, 167));
+}
+
+/* Battery charging animation*/ 
+.animated-green {
+    background: linear-gradient(142deg, #6CCBA7 18%, #219D57 84.75%);
+    filter: drop-shadow(0px 0px 2px rgb(108, 203, 167));
+    
+    animation: animated-chargin-batery 1s ease infinite alternate;
+}
+
+.animated-red {
+    background: linear-gradient(228.88deg, #EA384D 14.08%, #D31027 83.46%);
+    filter: drop-shadow(0px 0px 2px rgba(238, 16, 16, 0.71));
+
+    animation: animated-low-batery 1s ease infinite alternate;
+}
+
+.animated-green,
+.animated-red,
+.green-color {
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+@keyframes animated-chargin-batery {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes animated-low-batery{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+.gradient-color-red {
+    background: linear-gradient(228.88deg, #EA384D 14.08%, #D31027 83.46%);
+}
+
+.gradient-color-orange {
+    background: linear-gradient(228.88deg, #EA384D 14.08%, #E9741F 83.46%);
+}
+
+.gradient-color-yellow {
+    background: linear-gradient(142deg, #CFD963 18%, #219D57 84.75%);
+}
+
+.gradient-color-green {
+    background: linear-gradient(142deg, #6CCBA7 18%, #219D57 84.75%);
+}
